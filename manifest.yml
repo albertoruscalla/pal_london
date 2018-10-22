@@ -1,0 +1,6 @@
+applications:
+- name: pal1
+  path: build/libs/pal1.jar
+  random-route: true
+  env:
+    WELCOME_MESSAGE: Hello from Cloud Foundry

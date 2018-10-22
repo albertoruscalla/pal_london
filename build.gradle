@@ -1,0 +1,25 @@
+plugins {
+    id "java"
+    id "org.springframework.boot" version "1.5.4.RELEASE"
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web")
+    //compile group: 'org.springframework.boot', name: 'spring-boot-starter', version: '1.5.6.RELEASE'
+    //compile group: 'org.springframework.boot', name: 'spring-boot-starter-tomcat', version: '2.0.6.RELEASE'
+    //compile group: 'org.springframework', name: 'spring-web', version: '5.1.1.RELEASE'
+}
+
+
+bootRun.environment([
+        "WELCOME_MESSAGE": "hello",
+        "PORT": "8080"
+])
+
+test.environment([
+        "WELCOME_MESSAGE": "Hello from test",
+])
